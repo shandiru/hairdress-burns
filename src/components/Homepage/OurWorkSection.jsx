@@ -1,136 +1,117 @@
-import React, { useState, useEffect, useRef } from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const OurWorkSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalSlides = 4;
-  const slideRef = useRef(null);
+const images = [
+  {
+    src: "/gallery-brunette-highlights.png",
+    alt: "Brunette Highlights and Curls - Professional Hair Styling",
+  },
+  {
+    src: "/gallery-magenta-color.png",
+    alt: "Vibrant Magenta Hair Color - Expert Hair Coloring",
+  },
+  {
+    src: "/gallery-blonde-balayage.png",
+    alt: "Blonde Balayage and Waves - Professional Hair Design",
+  },
+ 
+  {
+    src: "/gallery-5.png",
+    alt: "Elegant Bridal Hair Styling - Soft Curls and Volume",
+  },
+  {
+    src: "/gallery-6.png",
+    alt: "Chic Modern Bob Cut - Hair Design Excellence",
+  },
+];
+
+const GallerySection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleItems = showAll ? images : images.slice(0, 4); // show 2 rows (2x2) initially
 
   useEffect(() => {
-    // Initialize AOS scroll animation
     AOS.init({
       duration: 1000,
-      easing: "ease-in-out",
       once: false,
-      mirror: true,
+      offset: 120,
+      easing: "ease-in-out",
     });
   }, []);
 
-  useEffect(() => {
-    // Auto-slide every 4 seconds
-    const interval = setInterval(() => {
-      handleNext();
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
-    );
-  };
-
-  const images = [
-    {
-      src: "/gallery-brunette-highlights.png",
-      alt: "Brunette Highlights and Curls - Professional Hair Styling",
-    },
-    {
-      src: "/gallery-magenta-color.png",
-      alt: "Vibrant Magenta Hair Color - Expert Hair Coloring",
-    },
-    {
-      src: "/gallery-blonde-balayage.png",
-      alt: "Blonde Balayage and Waves - Professional Hair Design",
-    },
-    {
-      src: "/harriet-portrait.png",
-      alt: "Harriet Burns - Master Hair Designer",
-    },
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-stone-100 to-slate-100">
-      <div className="container mx-auto px-4">
-        {/* Section Heading */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl font-light text-stone-800 mb-4">
+    <section className="bg-white dark:bg-black py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* === Headings === */}
+        <div data-aos="fade-up">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-3">
             Our Work
-          </h2>
-          <p className="text-stone-600 max-w-2xl mx-auto">
+          </h1>
+          <h6 className="text-gray-600 dark:text-gray-300 mb-10 text-lg max-w-2xl mx-auto">
             Discover the artistry and craftsmanship that goes into every cut,
-            color, and style at Burns Hair Design
-          </p>
+            color, and style at Burns Hair Design.
+          </h6>
         </div>
 
-        {/* Slider Section */}
+        {/* === Image Grid === */}
         <div
-          className="max-w-6xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="100"
         >
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            {/* Image Slider */}
-            <div
-              ref={slideRef}
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
-              {images.map((image, idx) => (
-                <div key={idx} className="w-full flex-shrink-0">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    loading="lazy"
-                    className="w-full h-96 object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Prev Button */}
-            <button
-              onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-
-            {/* Next Button */}
-            <button
-              onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-stone-800 p-3 rounded-full shadow-lg transition-all"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Dots Navigation */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {images.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  currentIndex === idx
-                    ? "bg-teal-600"
-                    : "bg-stone-300 hover:bg-teal-400"
-                }`}
-              ></button>
+          <AnimatePresence>
+            {visibleItems.map((image, index) => (
+              <motion.div
+                key={index}
+                layout
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                data-aos="zoom-in-up"
+                data-aos-delay={index * 100}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
             ))}
-          </div>
+          </AnimatePresence>
         </div>
+
+        {/* === See More / Show Less Button === */}
+        {images.length > 4 && (
+          <div
+            className="mt-10 flex justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="
+                px-6 py-2 rounded-md text-sm font-semibold
+                bg-green-600 text-white 
+                hover:bg-green-700 hover:shadow-[0_6px_20px_rgba(47,125,51,0.45)]
+                focus:ring-2 focus:ring-green-500 focus:outline-none
+                transition-all duration-300
+              "
+            >
+              {showAll ? "Show Less" : "See More"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
 };
 
-export default OurWorkSection;
+export default GallerySection;
