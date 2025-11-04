@@ -10,47 +10,47 @@ import "swiper/css/navigation";
 const allProducts = [
   {
     id: 1,
-    name: "Silken Veil",
+    name: "Milk shake make my day",
     category: "Milk Shake",
-    price: "$93",
+    description: "Hydrating conditioner for soft, radiant hair",
     image:
-      "https://framerusercontent.com/images/wztkqQgAxyqrRQ45505gRuXrv0.png?width=3600&height=2700",
+      "milk-shake-make-my-day-conditioner-300-ml-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
   {
     id: 2,
-    name: "Petal Flush",
+    name: "milk shake silver shine conditioner",
     category: "Milk Shake",
-    price: "$70",
+    description: "Neutralises yellow tones for bright, shiny blondes.",
     image:
-      "https://framerusercontent.com/images/bR7UHfxhFzWgFPesWcpo3mS8Y4.png?width=3600&height=2700",
+      "silver_shine_conditioner_100ml_2048x-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
   {
     id: 3,
-    name: "Bare Glow",
-    category: "Paul Mitchell",
-    price: "$81",
+    name: "milk shake k respect keratin system",
+    category: "Milk Shake",
+    description: "Smoothing treatment that respects hair and the environment..",
     image:
-      "https://framerusercontent.com/images/JBlqS8O8WIIqp8A4YtB7Sofjk.png?width=3600&height=2700",
+      "k_respect_smoothing_maintainer_mist_150ml-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
   {
     id: 4,
     name: "Gloss Veil",
     category: "Paul Mitchell",
-    price: "$70",
+    description: "Smooth gloss for instant shine and lasting hydration.",
     image:
       "https://framerusercontent.com/images/7z7ubWjnmKBQy3ZxYKxI9h8ye4.png?width=3600&height=2700",
     hoverBg: "/burns-logo.png",
   },
   {
     id: 5,
-    name: "Pearl Tint",
+    name: "milk shake moisture plus shampoo",
     category: "Milk Shake",
-    price: "$88",
+    description: "Moisture-boosting cleanse that leaves hair soft, manageable & vibrant..",
     image:
-      "https://framerusercontent.com/images/7z7ubWjnmKBQy3ZxYKxI9h8ye4.png?width=3600&height=2700",
+      "milk_shake-Moisture-Plus-Shampoo-300ml_1-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
 ];
@@ -174,20 +174,18 @@ export default function Essentials() {
 
                 {/* Product Info */}
                 <motion.div
-                  className="flex items-baseline justify-between w-full px-6 py-6 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10"
+                  className="flex flex-col w-full px-6 py-6 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10"
                   animate={{ opacity: hovered === p.id ? 0.95 : 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div>
-                    <h3 className="text-[17px] font-semibold leading-tight tracking-tight">
-                      {p.name}
-                    </h3>
-                    <p className="text-gray-500 text-[14px] mt-1">
-                      {p.category}
-                    </p>
-                  </div>
-                  <p className="text-[16px] font-semibold text-[#0A0A0A]">
-                    {p.price}
+                  <h3 className="text-[17px] font-semibold leading-tight tracking-tight mb-1">
+                    {p.name}
+                  </h3>
+                  <p className="text-gray-500 text-[14px] mb-2">
+                    {p.category}
+                  </p>
+                  <p className="text-[15px] text-gray-700 leading-snug">
+                    {p.description}
                   </p>
                 </motion.div>
               </motion.div>
