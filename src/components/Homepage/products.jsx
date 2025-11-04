@@ -116,6 +116,42 @@ const allProducts = [
       "paul-mitchell-extra-body-thicken-up-styling-liquid-200ml-p28680-72782_image-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
+  {
+    id: 13,
+    name: "Paul Mitchell Super Strong Shampoo",
+    category: "Paul Mitchell",
+    description: "Strengthens weak hair, reducing breakage and split ends..",
+    image:
+      "Paul_Mitchell_Super_Strong_Shampoo-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+  {
+    id: 14,
+    name: "Paul Mitchell Super Strong Conditioner",
+    category: "Paul Mitchell",
+    description: "Repairs and rebuilds damaged hair for resilience and shine..",
+    image:
+      "Paul_Mitchell_Super_Strong_Conditioner-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+   {
+    id: 15,
+    name: "Paul Mitchell Smooth Shampoo",
+    category: "Paul Mitchell",
+    description: "Controls frizz and smooths coarse, unruly hair..",
+    image:
+      "Paul_Mitchell_Smooth_Shampoo-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+   {
+    id: 16,
+    name: "Paul Mitchell The Detangler",
+    category: "Paul Mitchell",
+    description: "Instantly detangles and softens medium to coarse hair..",
+    image:
+      "Paul_Mitchell_The_Detangler-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
 ];
 
 export default function Essentials() {
