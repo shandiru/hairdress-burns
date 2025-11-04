@@ -2,11 +2,9 @@
 "use client";
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 
 
 const allProducts = [
@@ -174,12 +172,16 @@ const allProducts = [
   },
 ];
 
+
 export default function Essentials() {
   const [hovered, setHovered] = React.useState(null);
-  const [selectedCategory, setSelectedCategory] = React.useState("Milk Shake");
+  const [selectedCategory, setSelectedCategory] =
+    React.useState("Milk Shake");
 
   const categories = ["Milk Shake", "Paul Mitchell"];
-  const products = allProducts.filter((p) => p.category === selectedCategory);
+  const products = allProducts.filter(
+    (p) => p.category === selectedCategory
+  );
 
   return (
     <section className="py-16 md:py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative overflow-hidden">
@@ -208,36 +210,15 @@ export default function Essentials() {
           </div>
         </div>
 
-        {/* Navigation Arrows (hidden on mobile) */}
-        <div className="hidden md:flex absolute right-6 md:right-12 top-20 z-20 gap-4">
-          <button
-            className="swiper-button-prev bg-[#f2f2f2] hover:bg-black hover:text-white p-3 rounded-full shadow-md transition"
-            aria-label="Previous"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            className="swiper-button-next bg-[#f2f2f2] hover:bg-black hover:text-white p-3 rounded-full shadow-md transition"
-            aria-label="Next"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Swiper */}
+        {/* Swiper (no arrows) */}
         <Swiper
-          modules={[Navigation]}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
-          slidesPerView={1.1}
+          slidesPerView={1}
           spaceBetween={16}
           speed={600}
-          loop={true}
+          loop={false}
           grabCursor={true}
           breakpoints={{
-            480: { slidesPerView: 1.5, spaceBetween: 20 },
+            640: { slidesPerView: 1, spaceBetween: 20 },
             768: { slidesPerView: 2, spaceBetween: 28 },
             1024: { slidesPerView: 3, spaceBetween: 32 },
             1280: { slidesPerView: 4, spaceBetween: 40 },
@@ -285,7 +266,11 @@ export default function Essentials() {
                       scale: hovered === p.id ? 1.05 : 1,
                       y: hovered === p.id ? -8 : 0,
                     }}
-                    transition={{ type: "spring", stiffness: 160, damping: 12 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 160,
+                      damping: 12,
+                    }}
                   />
                 </div>
 
@@ -313,10 +298,3 @@ export default function Essentials() {
     </section>
   );
 }
-
-
-
-
-
-
-
