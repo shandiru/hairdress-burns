@@ -8,6 +8,7 @@ import MeetHarrietSection from "../components/Homepage/MeetHarrietSection"
 import TestimonialsSection from "../components/Homepage/TestimonialsSection"
 import ServicesPricingSection from "../components/Homepage/ServicesPricingSection"
 import ContactSection from "../components/Homepage/ContactSection"
+import Products from "../components/Homepage/products";
 function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ function Home() {
       <OurWorkSection />
       <TestimonialsSection />
       <ServicesPricingSection />
+      <Products />
       <ContactSection />
     
     </>
