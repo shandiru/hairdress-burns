@@ -7,11 +7,11 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const products = [
+const allProducts = [
   {
     id: 1,
     name: "Silken Veil",
-    category: "Tints",
+    category: "Milk Shake",
     price: "$93",
     image:
       "https://framerusercontent.com/images/wztkqQgAxyqrRQ45505gRuXrv0.png?width=3600&height=2700",
@@ -20,7 +20,7 @@ const products = [
   {
     id: 2,
     name: "Petal Flush",
-    category: "Tints",
+    category: "Milk Shake",
     price: "$70",
     image:
       "https://framerusercontent.com/images/bR7UHfxhFzWgFPesWcpo3mS8Y4.png?width=3600&height=2700",
@@ -29,7 +29,7 @@ const products = [
   {
     id: 3,
     name: "Bare Glow",
-    category: "Tints",
+    category: "Paul Mitchell",
     price: "$81",
     image:
       "https://framerusercontent.com/images/JBlqS8O8WIIqp8A4YtB7Sofjk.png?width=3600&height=2700",
@@ -38,7 +38,7 @@ const products = [
   {
     id: 4,
     name: "Gloss Veil",
-    category: "Glazers",
+    category: "Paul Mitchell",
     price: "$70",
     image:
       "https://framerusercontent.com/images/7z7ubWjnmKBQy3ZxYKxI9h8ye4.png?width=3600&height=2700",
@@ -46,9 +46,9 @@ const products = [
   },
   {
     id: 5,
-    name: "Gloss Veil",
-    category: "Glazers",
-    price: "$70",
+    name: "Pearl Tint",
+    category: "Milk Shake",
+    price: "$88",
     image:
       "https://framerusercontent.com/images/7z7ubWjnmKBQy3ZxYKxI9h8ye4.png?width=3600&height=2700",
     hoverBg: "/burns-logo.png",
@@ -57,14 +57,39 @@ const products = [
 
 export default function Essentials() {
   const [hovered, setHovered] = React.useState(null);
+  const [selectedCategory, setSelectedCategory] = React.useState("Milk Shake");
+
+  const categories = ["Milk Shake", "Paul Mitchell"];
+  const products = allProducts.filter(
+    (p) => p.category === selectedCategory
+  );
 
   return (
     <section className="py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative">
       <div className="container mx-auto px-10">
-        {/* Section title */}
-        <h2 className="text-[42px] font-semibold mb-16 leading-none tracking-tight">
-          Your essentials
-        </h2>
+        {/* Section Title */}
+        <div className="flex justify-between items-center mb-10">
+          <h2 className="text-[42px] font-semibold leading-none tracking-tight">
+            Your essentials
+          </h2>
+
+          {/* Category Tabs */}
+          <div className="flex gap-3">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-5 py-2 rounded-full border transition-all duration-300 ${
+                  selectedCategory === cat
+                    ? "bg-black text-white border-black"
+                    : "bg-white border-gray-300 hover:bg-gray-100"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* Navigation Arrows */}
         <div className="absolute right-12 top-16 z-20 flex gap-4">
@@ -82,7 +107,7 @@ export default function Essentials() {
           </button>
         </div>
 
-        {/* Swiper Carousel */}
+        {/* Product Carousel */}
         <Swiper
           modules={[Navigation]}
           navigation={{
@@ -117,7 +142,7 @@ export default function Essentials() {
                   <Heart className="w-5 h-5 text-gray-400 group-hover:text-black" />
                 </button>
 
-                {/* Hover background logo (faint but visible) */}
+                {/* Hover Background Logo */}
                 <AnimatePresence>
                   {hovered === p.id && (
                     <motion.img
@@ -147,7 +172,7 @@ export default function Essentials() {
                   />
                 </div>
 
-                {/* Product info */}
+                {/* Product Info */}
                 <motion.div
                   className="flex items-baseline justify-between w-full px-6 py-6 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10"
                   animate={{ opacity: hovered === p.id ? 0.95 : 1 }}
