@@ -37,11 +37,11 @@ const allProducts = [
   },
   {
     id: 4,
-    name: "Gloss Veil",
+    name: "Paul Mitchell Color Protect Shampoo",
     category: "Paul Mitchell",
-    description: "Smooth gloss for instant shine and lasting hydration.",
+    description: "Gentle cleanser that preserves color and boosts shine.",
     image:
-      "https://framerusercontent.com/images/7z7ubWjnmKBQy3ZxYKxI9h8ye4.png?width=3600&height=2700",
+      "Paul Mitchell Color Protect Shampoo.png",
     hoverBg: "/burns-logo.png",
   },
   {
@@ -87,6 +87,33 @@ const allProducts = [
     description: "Hydrating leave-in conditioner with milk proteins and fruit extracts for smooth, manageable hair.",
     image:
       "Milk Shake Leave In Conditioner.png",
+    hoverBg: "/burns-logo.png",
+  },
+  {
+    id: 10,
+    name: "Paul Mitchell Color Protect Conditioner",
+    category: "Paul Mitchell",
+    description: "Hydrates and shields color-treated hair from fading.",
+    image:
+      "Paul_Mitchell_Color_Protect_Conditioner-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+  {
+    id: 11,
+    name: "Paul Mitchell Extra-Body Shampoo",
+    category: "Paul Mitchell",
+    description: "Adds volume and body for fine or limp hair..",
+    image:
+      "Paul_Mitchell_Extra-Body_Shampoo-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+   {
+    id: 12,
+    name: "Paul Mitchell Extra-Body Conditioner",
+    category: "Paul Mitchell",
+    description: "Detangles while thickening strands for fuller results.",
+    image:
+      "paul-mitchell-extra-body-thicken-up-styling-liquid-200ml-p28680-72782_image-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
 ];
