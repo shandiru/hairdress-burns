@@ -152,6 +152,24 @@ const allProducts = [
       "Paul_Mitchell_The_Detangler-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
+   {
+    id: 17,
+    name: "Paul Mitchell Instant Moisture Shampoo",
+    category: "Paul Mitchell",
+    description: "Restores hydration and elasticity to dry, thirsty hair.",
+    image:
+      "Paul_Mitchell_Instant_Moisture_Shampoo-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+   {
+    id: 18,
+    name: "Paul Mitchell Soft Style Spray or Foam",
+    category: "Paul Mitchell",
+    description: "Lightweight styling hold that adds softness and natural shine..",
+    image:
+      "Paul_Mitchell_Soft_Style_Spray_or_Foam-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
 ];
 
 export default function Essentials() {
