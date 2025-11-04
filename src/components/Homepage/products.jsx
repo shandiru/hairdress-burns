@@ -53,6 +53,42 @@ const allProducts = [
       "milk_shake-Moisture-Plus-Shampoo-300ml_1-removebg-preview.png",
     hoverBg: "/burns-logo.png",
   },
+   {
+    id: 6,
+    name: "milk shake colour care",
+    category: "Milk Shake",
+    description: "Protects your hair colour, hydrates and enhances shine.",
+    image:
+      "FLOWERPOWERSHAMPOO300ML-UPDATED2024_2048x-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+   {
+    id: 7,
+    name: "milk shake integrity",
+    category: "Milk Shake",
+    description: "Deep-nourish and restore damaged hair with muru muru butter.",
+    image:
+      "INTEGRITY_SHAMPOO_300ML_-_UPDATED_2024_2048x-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+  {
+    id: 8,
+    name: "Milk Shake Whipped Cream Leave-In Foam",
+    category: "Milk Shake",
+    description: "Nourishing leave-in foam that softens, hydrates, and protects hair with milk proteins and Integrity.",
+    image:
+      "Milk_Shake_Whipped_Cream_Leave-In_Foam-removebg-preview.png",
+    hoverBg: "/burns-logo.png",
+  },
+  {
+    id: 9,
+    name: "Milk Shake Leave In Conditioner",
+    category: "Milk Shake",
+    description: "Hydrating leave-in conditioner with milk proteins and fruit extracts for smooth, manageable hair.",
+    image:
+      "Milk Shake Leave In Conditioner.png",
+    hoverBg: "/burns-logo.png",
+  },
 ];
 
 export default function Essentials() {
