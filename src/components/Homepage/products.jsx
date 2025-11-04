@@ -1,3 +1,4 @@
+
 "use client";
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
 
 const allProducts = [
   {
@@ -177,26 +179,24 @@ export default function Essentials() {
   const [selectedCategory, setSelectedCategory] = React.useState("Milk Shake");
 
   const categories = ["Milk Shake", "Paul Mitchell"];
-  const products = allProducts.filter(
-    (p) => p.category === selectedCategory
-  );
+  const products = allProducts.filter((p) => p.category === selectedCategory);
 
   return (
-    <section className="py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative">
-      <div className="container mx-auto px-10">
-        {/* Section Title */}
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="text-[42px] font-semibold leading-none tracking-tight">
+    <section className="py-16 md:py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-10">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5 mb-8 md:mb-14">
+          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] font-semibold leading-tight tracking-tight">
             Your essentials
           </h2>
 
           {/* Category Tabs */}
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2 rounded-full border transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm sm:text-base border transition-all duration-300 ${
                   selectedCategory === cat
                     ? "bg-black text-white border-black"
                     : "bg-white border-gray-300 hover:bg-gray-100"
@@ -208,8 +208,8 @@ export default function Essentials() {
           </div>
         </div>
 
-        {/* Navigation Arrows */}
-        <div className="absolute right-12 top-16 z-20 flex gap-4">
+        {/* Navigation Arrows (hidden on mobile) */}
+        <div className="hidden md:flex absolute right-6 md:right-12 top-20 z-20 gap-4">
           <button
             className="swiper-button-prev bg-[#f2f2f2] hover:bg-black hover:text-white p-3 rounded-full shadow-md transition"
             aria-label="Previous"
@@ -224,30 +224,30 @@ export default function Essentials() {
           </button>
         </div>
 
-        {/* Product Carousel */}
+        {/* Swiper */}
         <Swiper
           modules={[Navigation]}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
-          slidesPerView={4}
-          spaceBetween={40}
-          speed={650}
+          slidesPerView={1.1}
+          spaceBetween={16}
+          speed={600}
           loop={true}
           grabCursor={true}
-          className="!overflow-visible"
           breakpoints={{
-            320: { slidesPerView: 1.1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
+            480: { slidesPerView: 1.5, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 28 },
+            1024: { slidesPerView: 3, spaceBetween: 32 },
+            1280: { slidesPerView: 4, spaceBetween: 40 },
           }}
+          className="!overflow-visible"
         >
           {products.map((p, i) => (
             <SwiperSlide key={p.id}>
               <motion.div
-                className="group relative flex flex-col items-center justify-between rounded-[20px] bg-[#F9F9F8] overflow-hidden shadow-[0_6px_30px_rgba(0,0,0,0.05)] transition-all duration-300 w-full h-[520px]"
+                className="group relative flex flex-col items-center justify-between rounded-[20px] bg-[#F9F9F8] overflow-hidden shadow-[0_6px_30px_rgba(0,0,0,0.05)] transition-all duration-300 w-full h-[460px] sm:h-[480px] md:h-[500px]"
                 onMouseEnter={() => setHovered(p.id)}
                 onMouseLeave={() => setHovered(null)}
                 initial={{ opacity: 0, y: 25 }}
@@ -255,20 +255,20 @@ export default function Essentials() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
               >
                 {/* ❤️ Wishlist Button */}
-                <button className="absolute top-5 right-5 z-30 p-2 bg-white/70 rounded-full hover:bg-white transition">
+                <button className="absolute top-4 right-4 z-30 p-2 bg-white/70 rounded-full hover:bg-white transition">
                   <Heart className="w-5 h-5 text-gray-400 group-hover:text-black" />
                 </button>
 
-                {/* Hover Background Logo */}
+                {/* Hover Background */}
                 <AnimatePresence>
                   {hovered === p.id && (
                     <motion.img
                       key="hover-bg"
                       src={p.hoverBg}
                       alt="Background"
-                      className="absolute inset-0 w-full h-full object-contain z-0 opacity-[0.18]"
+                      className="absolute inset-0 w-full h-full object-contain z-0 opacity-[0.15]"
                       initial={{ opacity: 0, scale: 1.05 }}
-                      animate={{ opacity: 1, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 0.95 }}
                       exit={{ opacity: 0, scale: 1 }}
                       transition={{ duration: 0.6 }}
                     />
@@ -276,11 +276,11 @@ export default function Essentials() {
                 </AnimatePresence>
 
                 {/* Product Image */}
-                <div className="relative flex justify-center items-center h-[400px] w-full py-10 z-10">
+                <div className="relative flex justify-center items-center h-[300px] sm:h-[340px] md:h-[380px] w-full py-6 sm:py-8 z-10">
                   <motion.img
                     src={p.image}
                     alt={p.name}
-                    className="w-[240px] h-auto object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
+                    className="w-[160px] sm:w-[200px] md:w-[240px] h-auto object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
                     animate={{
                       scale: hovered === p.id ? 1.05 : 1,
                       y: hovered === p.id ? -8 : 0,
@@ -291,17 +291,17 @@ export default function Essentials() {
 
                 {/* Product Info */}
                 <motion.div
-                  className="flex flex-col w-full px-6 py-6 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10"
+                  className="flex flex-col w-full px-5 sm:px-6 py-5 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10 text-center sm:text-left"
                   animate={{ opacity: hovered === p.id ? 0.95 : 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <h3 className="text-[17px] font-semibold leading-tight tracking-tight mb-1">
+                  <h3 className="text-[15px] sm:text-[17px] font-semibold leading-tight tracking-tight mb-1">
                     {p.name}
                   </h3>
-                  <p className="text-gray-500 text-[14px] mb-2">
+                  <p className="text-gray-500 text-[13px] sm:text-[14px] mb-2">
                     {p.category}
                   </p>
-                  <p className="text-[15px] text-gray-700 leading-snug">
+                  <p className="text-[13px] sm:text-[15px] text-gray-700 leading-snug">
                     {p.description}
                   </p>
                 </motion.div>
@@ -313,3 +313,10 @@ export default function Essentials() {
     </section>
   );
 }
+
+
+
+
+
+
+
