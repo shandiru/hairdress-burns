@@ -33,7 +33,7 @@ const HeroSection = () => {
             alt="Burns Hair Design Logo"
             width="600"
             height="300"
-            src="/burns-logo.png"
+            src="/burns-logo.jpeg"
             className="mx-auto mb-8 drop-shadow-2xl"
           />
         </div>

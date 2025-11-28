@@ -15,7 +15,7 @@ const allProducts = [
     description: "Hydrating conditioner for soft, radiant hair",
     image:
       "milk-shake-make-my-day-conditioner-300-ml-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const allProducts = [
     description: "Neutralises yellow tones for bright, shiny blondes.",
     image:
       "silver_shine_conditioner_100ml_2048x-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const allProducts = [
     description: "Smoothing treatment that respects hair and the environment..",
     image:
       "k_respect_smoothing_maintainer_mist_150ml-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const allProducts = [
     description: "Gentle cleanser that preserves color and boosts shine.",
     image:
       "Paul Mitchell Color Protect Shampoo.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const allProducts = [
     description: "Moisture-boosting cleanse that leaves hair soft, manageable & vibrant..",
     image:
       "milk_shake-Moisture-Plus-Shampoo-300ml_1-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 6,
@@ -60,7 +60,7 @@ const allProducts = [
     description: "Protects your hair colour, hydrates and enhances shine.",
     image:
       "FLOWERPOWERSHAMPOO300ML-UPDATED2024_2048x-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 7,
@@ -69,7 +69,7 @@ const allProducts = [
     description: "Deep-nourish and restore damaged hair with muru muru butter.",
     image:
       "INTEGRITY_SHAMPOO_300ML_-_UPDATED_2024_2048x-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ const allProducts = [
     description: "Nourishing leave-in foam that softens, hydrates, and protects hair with milk proteins and Integrity.",
     image:
       "Milk_Shake_Whipped_Cream_Leave-In_Foam-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const allProducts = [
     description: "Hydrating leave-in conditioner with milk proteins and fruit extracts for smooth, manageable hair.",
     image:
       "Milk Shake Leave In Conditioner.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 10,
@@ -96,7 +96,7 @@ const allProducts = [
     description: "Hydrates and shields color-treated hair from fading.",
     image:
       "Paul_Mitchell_Color_Protect_Conditioner-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 11,
@@ -105,7 +105,7 @@ const allProducts = [
     description: "Adds volume and body for fine or limp hair..",
     image:
       "Paul_Mitchell_Extra-Body_Shampoo-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 12,
@@ -114,7 +114,7 @@ const allProducts = [
     description: "Detangles while thickening strands for fuller results.",
     image:
       "paul-mitchell-extra-body-thicken-up-styling-liquid-200ml-p28680-72782_image-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 13,
@@ -123,7 +123,7 @@ const allProducts = [
     description: "Strengthens weak hair, reducing breakage and split ends..",
     image:
       "Paul_Mitchell_Super_Strong_Shampoo-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 14,
@@ -132,7 +132,7 @@ const allProducts = [
     description: "Repairs and rebuilds damaged hair for resilience and shine..",
     image:
       "Paul_Mitchell_Super_Strong_Conditioner-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 15,
@@ -141,7 +141,7 @@ const allProducts = [
     description: "Controls frizz and smooths coarse, unruly hair..",
     image:
       "Paul_Mitchell_Smooth_Shampoo-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 16,
@@ -150,7 +150,7 @@ const allProducts = [
     description: "Instantly detangles and softens medium to coarse hair..",
     image:
       "Paul_Mitchell_The_Detangler-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 17,
@@ -159,7 +159,7 @@ const allProducts = [
     description: "Restores hydration and elasticity to dry, thirsty hair.",
     image:
       "Paul_Mitchell_Instant_Moisture_Shampoo-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
    {
     id: 18,
@@ -168,7 +168,7 @@ const allProducts = [
     description: "Lightweight styling hold that adds softness and natural shine..",
     image:
       "Paul_Mitchell_Soft_Style_Spray_or_Foam-removebg-preview.png",
-    hoverBg: "/burns-logo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
   },
 ];
 
