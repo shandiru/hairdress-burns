@@ -170,6 +170,14 @@ const allProducts = [
       "Paul_Mitchell_Soft_Style_Spray_or_Foam-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
+   {
+    id: 19,
+    name: "Milk Shake Integrity Conditioner",
+    category: "Milk Shake",
+    description: "Deep-conditioning formula that restores softness and hydration.",
+    image: "INTEGRITY_CONDITIONER_300ML-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
 ];
 
 
