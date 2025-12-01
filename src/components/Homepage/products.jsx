@@ -276,7 +276,7 @@ const allProducts = [
   hoverBg: "/burns-logo-removebg-preview.png",
 },
 {
-  id: 33,
+  id: 32,
   name: "Paul Mitchell Tea Tree Special Shampoo",
   category: "Paul Mitchell",
   description: "Invigorating shampoo that refreshes the scalp with tea tree oil.",
@@ -284,7 +284,7 @@ const allProducts = [
   hoverBg: "/burns-logo-removebg-preview.png",
 },
 {
-  id: 34,
+  id: 33,
   name: "Paul Mitchell Tea Tree Special Conditioner",
   category: "Paul Mitchell",
   description: "Cooling conditioner that detangles and revitalises the scalp.",
@@ -292,7 +292,7 @@ const allProducts = [
   hoverBg: "/burns-logo-removebg-preview.png",
 },
 {
-  id: 35,
+  id: 34,
   name: "Paul Mitchell Super Clean Light Spray",
   category: "Paul Mitchell",
   description: "Light finishing spray for flexible hold and natural movement.",
@@ -300,7 +300,7 @@ const allProducts = [
   hoverBg: "/burns-logo-removebg-preview.png",
 },
 {
-  id: 36,
+  id: 35,
   name: "Paul Mitchell Fast Drying Sculpting Spray",
   category: "Paul Mitchell",
   description: "Quick-dry styling spray for added body, texture, and control.",
