@@ -60,7 +60,26 @@ const images = [
     src: "/im10.jpeg",
     alt: "",
   },
-   
+    {
+    src: "/im11.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im12.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im13.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im14.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im15.jpeg",
+    alt: "",
+  },
 ];
 
 const GallerySection = () => {
