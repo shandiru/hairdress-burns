@@ -299,14 +299,6 @@ const allProducts = [
   image: "Paul_Mitchell_Super_Clean_Light.png",
   hoverBg: "/burns-logo-removebg-preview.png",
 },
-{
-  id: 35,
-  name: "Paul Mitchell Fast Drying Sculpting Spray",
-  category: "Paul Mitchell",
-  description: "Quick-dry styling spray for added body, texture, and control.",
-  image: "Paul_Mitchell_Fast_Drying_Sculpting_Spray.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-}
 
 
 
