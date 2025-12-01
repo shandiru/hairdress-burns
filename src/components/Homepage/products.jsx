@@ -10,7 +10,7 @@ import "swiper/css";
 const allProducts = [
   {
     id: 1,
-    name: "Milk shake make my day",
+    name: "Milk shake make my day conditioner",
     category: "Milk Shake",
     description: "Hydrating conditioner for soft, radiant hair",
     image:
@@ -55,7 +55,7 @@ const allProducts = [
   },
    {
     id: 6,
-    name: "milk shake colour care",
+    name: "milk shake colour care  shampoo",
     category: "Milk Shake",
     description: "Protects your hair colour, hydrates and enhances shine.",
     image:
@@ -64,7 +64,7 @@ const allProducts = [
   },
    {
     id: 7,
-    name: "milk shake integrity",
+    name: "milk shake integrity shampoo",
     category: "Milk Shake",
     description: "Deep-nourish and restore damaged hair with muru muru butter.",
     image:
