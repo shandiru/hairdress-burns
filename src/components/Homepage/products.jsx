@@ -210,6 +210,22 @@ const allProducts = [
     image: "WHIPPED_CREAM_VANILLA_FOAM_200ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
+   {
+    id: 24,
+    name: "Milk Shake Mini Miracle Gift Boxes",
+    category: "Milk Shake",
+    description: "Travel-size combo kits including mini shampoo, conditioner & treatments.",
+    image: "MINI_MIRACLE_GIFT_BOX-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 25,
+    name: "Milk Shake Argan Repair Spray",
+    category: "Milk Shake",
+    description: "Nourishing spray for protection, shine, and repair.",
+    image: "ARGAN_REPAIR_SPRAY_150ML-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  }
 ];
 
 
