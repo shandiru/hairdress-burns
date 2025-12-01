@@ -100,6 +100,46 @@ const images = [
     src: "/im20.jpeg",
     alt: "",
   },
+    {
+    src: "/im21.jpeg",
+    alt: "",
+  },
+    {
+    src: "/im22.jpeg",
+    alt: "",
+  },
+    {
+    src: "/im23.jpeg",
+    alt: "",
+  },
+    {
+    src: "/im24.jpeg",
+    alt: "",
+  },
+    {
+    src: "/im25.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im26.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im27.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im28.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im29.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im30.jpeg",
+    alt: "",
+  },
 ];
 
 const GallerySection = () => {
