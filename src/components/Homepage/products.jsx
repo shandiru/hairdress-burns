@@ -225,7 +225,17 @@ const allProducts = [
     description: "Nourishing spray for protection, shine, and repair.",
     image: "ARGAN_REPAIR_SPRAY_150ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
-  }
+  },
+  {
+    id: 26,
+    name: "Milk Shake Pink Conditioner",
+    category: "Milk Shake",
+    description: "Hydrating conditioner in pink packaging for soft, radiant hair.",
+    image: "MILK_SHAKE_PINK_CONDITIONER-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+},
+
+
 ];
 
 
