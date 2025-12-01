@@ -19,14 +19,28 @@ const images = [
     alt: "Blonde Balayage and Waves - Professional Hair Design",
   },
  
-  {
-    src: "/gallery-5.png",
-    alt: "Elegant Bridal Hair Styling - Soft Curls and Volume",
+ 
+   {
+    src: "/im1.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im2.jpeg",
+    alt: "",
   },
   {
-    src: "/gallery-6.png",
-    alt: "Chic Modern Bob Cut - Hair Design Excellence",
+    src: "/im3.jpeg",
+    alt: "",
   },
+  {
+    src: "/im4.jpeg",
+    alt: "",
+  },
+  {
+    src: "/im5.jpeg",
+    alt: "",
+  },
+   
 ];
 
 const GallerySection = () => {
