@@ -40,6 +40,26 @@ const images = [
     src: "/im5.jpeg",
     alt: "",
   },
+   {
+    src: "/im6.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im7.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im8.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im9.jpeg",
+    alt: "",
+  },
+   {
+    src: "/im10.jpeg",
+    alt: "",
+  },
    
 ];
 
