@@ -140,6 +140,26 @@ const images = [
     src: "/im30.jpeg",
     alt: "",
   },
+  {
+    src: "/im31.jpeg",
+    alt: "",
+  },
+  {
+    src: "/im32.jpeg",
+    alt: "",
+  },
+  {
+    src: "/im33.jpeg",
+    alt: "",
+  },
+  {
+    src: "/im34.jpeg",
+    alt: "",
+  },
+  {
+    src: "/im35.jpeg",
+    alt: "",
+  },
 ];
 
 const GallerySection = () => {
