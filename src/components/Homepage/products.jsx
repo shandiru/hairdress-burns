@@ -178,6 +178,38 @@ const allProducts = [
     image: "INTEGRITY_CONDITIONER_300ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
+  {
+    id: 20,
+    name: "Milk Shake K-Respect Smoothing Shampoo",
+    category: "Milk Shake",
+    description: "Anti-frizz smoothing shampoo for coarse or unruly hair.",
+    image: "K_RESPECT_SMOOTHING_SHAMPOO_300ML-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 21,
+    name: "Milk Shake Incredible Milk 12 Effects",
+    category: "Milk Shake",
+    description: "Multi-benefit leave-in treatment offering hydration, repair & heat protection.",
+    image: "INCREDIBLE_MILK_12_EFFECTS_200ML-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 22,
+    name: "Milk Shake Sensorial Mint Conditioner",
+    category: "Milk Shake",
+    description: "Refreshing mint conditioner that cools the scalp and hydrates hair.",
+    image: "SENSORIAL_MINT_CONDITIONER_250ML-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 23,
+    name: "Milk Shake Vanilla Whipped Cream Leave-In Foam",
+    category: "Milk Shake",
+    description: "Leave-in conditioning foam variant for softness and shine.",
+    image: "WHIPPED_CREAM_VANILLA_FOAM_200ML-removebg-preview.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
 ];
 
 
