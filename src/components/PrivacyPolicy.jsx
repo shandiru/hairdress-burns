@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-white">
-                        <p><strong>EAR WE GO</strong></p>
-                        <p>Email: <a href="mailto:earwegosales@gmail.com" className="text-[#27AE60] hover:underline">earwegosales@gmail.com</a></p>
-                        <p>Phone: 0808 137 1961</p>
-                        <p>Address: Great Northern Rd, Derby, DE1 1LR</p>
+                        <p><strong>Burns Hair Design</strong></p>
+                        <p>Email: <a href="mailto:info@burnshairdesign.com" className="text-[#27AE60] hover:underline">info@burnshairdesign.com</a></p>
+                        <p>Phone: +44 115 937 4180</p>
+                        <p>Address: 6 The Square, Keyworth, Nottingham NG12 5JT, United Kingdom</p>
                     </div>
                     <p className="mt-2 text-white">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}
