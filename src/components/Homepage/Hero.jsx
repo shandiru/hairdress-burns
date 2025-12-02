@@ -15,16 +15,17 @@ const HeroSection = () => {
 
   return (
     <section className="relative py-32 px-4 overflow-hidden min-h-screen flex items-center">
-      {/* Background YouTube Video */}
-      <div className="absolute inset-0 z-0">
-        <iframe
-          src="https://www.youtube.com/embed/-FnrCZJw6TE?autoplay=1&mute=1&loop=1&playlist=-FnrCZJw6TE&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-          className="w-full h-full object-cover scale-150"
-          style={{ minHeight: "100%", minWidth: "100%" }}
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        ></iframe>
-
+      
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+        <video
+          src="/Hair Salon BROLL video shot on SONY A7siii.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        ></video>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
