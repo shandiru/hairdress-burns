@@ -9,9 +9,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const images = [
-  { src: "/gallery-brunette-highlights.png", alt: "" },
-  { src: "/gallery-magenta-color.png", alt: "" },
-  { src: "/gallery-blonde-balayage.png", alt: "" },
+  // { src: "/gallery-brunette-highlights.png", alt: "" },
+  // { src: "/gallery-magenta-color.png", alt: "" },
+  // { src: "/gallery-blonde-balayage.png", alt: "" },
   { src: "/im1.jpeg", alt: "" },
   { src: "/im2.jpeg", alt: "" },
   { src: "/im3.jpeg", alt: "" },
