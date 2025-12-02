@@ -26,7 +26,7 @@ const MeetHarrietSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white px-0 md:px-16">
+    <section className="py-20 bg-white px-0 md:px-16" id="about">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">

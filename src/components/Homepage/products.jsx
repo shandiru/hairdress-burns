@@ -318,7 +318,7 @@ export default function Essentials() {
   );
 
   return (
-    <section className="py-16 md:py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative overflow-hidden" id="products">
       <div className="container mx-auto px-4 md:px-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5 mb-8 md:mb-14">

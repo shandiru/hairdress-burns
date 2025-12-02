@@ -27,7 +27,7 @@ const ServicesPricingSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-stone-50 to-slate-100">
+    <section className="py-20 bg-gradient-to-br from-stone-50 to-slate-100" id="services">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">

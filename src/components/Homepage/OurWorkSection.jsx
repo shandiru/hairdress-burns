@@ -2,12 +2,11 @@
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const images = [
   { src: "/gallery-brunette-highlights.png", alt: "" },
@@ -64,7 +63,7 @@ export default function GallerySection() {
 
   return (
     <>
-      <section className="bg-white dark:bg-black py-16">
+      <section className="bg-white dark:bg-black py-16" id="our-work">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-3">
@@ -76,13 +75,10 @@ export default function GallerySection() {
 
           {/* === Swiper Slider === */}
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Autoplay]}
             slidesPerView={3}
             spaceBetween={20}
             navigation
-            pagination={{
-              clickable: true,
-            }}
             loop={true}
             autoplay={{
               delay: 2500,
@@ -93,18 +89,24 @@ export default function GallerySection() {
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="pb-16" // adds space below for dots
+            className="pb-0"
           >
             {images.map((img, idx) => (
               <SwiperSlide key={idx}>
                 <div
                   onClick={() => setSelectedImage(img.src)}
-                  className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="overflow-hidden rounded-xl shadow-md cursor-pointer group"
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                    className="
+                      w-full 
+                     h-full
+                      object-cover 
+                      transition-transform duration-300 
+                      group-hover:scale-[1.03]
+                    "
                   />
                 </div>
               </SwiperSlide>
@@ -114,11 +116,11 @@ export default function GallerySection() {
         </div>
       </section>
 
-      {/* === POPUP MODAL === */}
+      {/* === Popup Modal === */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -126,10 +128,10 @@ export default function GallerySection() {
           >
             <motion.img
               src={selectedImage}
-              className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
+              className="max-w-[95%] max-h-[95%] rounded-xl shadow-2xl"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
             />
           </motion.div>
         )}

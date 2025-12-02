@@ -1,11 +1,10 @@
+"use client";
+
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  MapPin,
-  Phone,
-  Sparkles,
-} from "lucide-react";
+import emailjs from "@emailjs/browser"; // <-- EmailJS added
+import { MapPin, Phone, Sparkles, Mail } from "lucide-react";
 
 const ContactSection = () => {
   useEffect(() => {
@@ -17,39 +16,80 @@ const ContactSection = () => {
     });
   }, []);
 
+  // EMAILJS SUBMIT FUNCTION
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // <-- replace
+        "YOUR_TEMPLATE_ID", // <-- replace
+        e.target,
+        "YOUR_PUBLIC_KEY" // <-- replace
+      )
+      .then(
+        () => {
+          alert("Message Sent Successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send. Try again.");
+          console.error(error);
+        }
+      );
+  };
+
   return (
-    <section className="py-20 bg-stone-800 text-white px-0 md:px-16">
+    <section className="py-20 bg-stone-800 text-white px-0 md:px-16" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left Column */}
+
+          {/* LEFT COLUMN */}
           <div data-aos="fade-right">
             <h2 className="text-4xl font-light mb-8">Get In Touch</h2>
 
-            {/* Contact Details */}
             <div className="space-y-6 mb-8">
-              {/* Address */}
-              <div className="flex items-start space-x-4">
+
+              {/* Address - Click Maps */}
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=6+The+Square,+Keyworth,+Nottingham+NG12+5JT"
+                target="_blank"
+                className="flex items-start space-x-4 hover:text-teal-300"
+              >
                 <MapPin className="h-6 w-6 text-teal-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-stone-300 leading-relaxed">
-                    6 The Square
-                    <br />
-                    Keyworth, Nottingham
-                    <br />
+                    6 The Square<br />
+                    Keyworth, Nottingham<br />
                     NG12 5JT
                   </p>
                 </div>
-              </div>
+              </a>
 
-              {/* Phone */}
-              <div className="flex items-start space-x-4">
+              {/* Phone - Click to Call */}
+              <a
+                href="tel:01159374180"
+                className="flex items-start space-x-4 hover:text-teal-300"
+              >
                 <Phone className="h-6 w-6 text-teal-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-stone-300">0115 937 4180</p>
                 </div>
-              </div>
+              </a>
+
+              {/* Email - Click to open mail */}
+              <a
+                href="mailto:info@burnshairdesign.com"
+                className="flex items-start space-x-4 hover:text-teal-300"
+              >
+                <Mail className="h-6 w-6 text-teal-400 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-stone-300">info@burnshairdesign.com</p>
+                </div>
+              </a>
 
               {/* Experience */}
               <div className="flex items-start space-x-4">
@@ -70,107 +110,91 @@ const ContactSection = () => {
               data-aos="zoom-in"
             >
               <h3 className="text-xl font-semibold mb-2">Quick Booking</h3>
-              <p className="mb-4">
-                Call us directly for immediate assistance
-              </p>
-              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-11 rounded-md px-8 w-full bg-white text-teal-600 hover:bg-stone-100 transition-colors shadow-md">
+              <p className="mb-4">Call us directly for immediate assistance</p>
+
+              <a
+                href="tel:01159374180"
+                className="inline-flex items-center justify-center gap-2 text-sm font-medium h-11 rounded-md px-8 w-full bg-white text-teal-600 hover:bg-stone-100 transition shadow-md"
+              >
                 <Phone className="h-5 w-5 mr-2" />
                 Call Now: 0115 937 4180
-              </button>
+              </a>
             </div>
           </div>
 
-          {/* Right Column — Contact Form */}
+          {/* RIGHT COLUMN — EMAILJS FORM */}
           <div
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
             data-aos="fade-left"
           >
             <h3 className="text-2xl font-light mb-6">Send Us a Message</h3>
-            <form className="space-y-6">
+
+            <form className="space-y-6" onSubmit={sendEmail}>
+              
               {/* Name Fields */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label className="block text-sm font-medium mb-2">
                     First Name
                   </label>
                   <input
                     type="text"
-                    id="firstName"
                     name="firstName"
-                    placeholder="Your first name"
                     required
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                    placeholder="Your first name"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium mb-2"
-                  >
+                  <label className="block text-sm font-medium mb-2">
                     Last Name
                   </label>
                   <input
                     type="text"
-                    id="lastName"
                     name="lastName"
-                    placeholder="Your last name"
                     required
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                    placeholder="Your last name"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
                   />
                 </div>
               </div>
 
               {/* Email */}
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
                   name="email"
-                  placeholder="your.email@example.com"
                   required
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                  placeholder="your.email@example.com"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Phone Number
                 </label>
                 <input
                   type="tel"
-                  id="phone"
                   name="phone"
                   placeholder="Your phone number"
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
                 />
               </div>
 
               {/* Service Interest */}
               <div>
-                <label
-                  htmlFor="service"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Service Interest
                 </label>
                 <select
-                  id="service"
                   name="service"
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
                 >
                   <option value="" className="text-stone-800">
                     Select a service
@@ -204,30 +228,28 @@ const ContactSection = () => {
 
               {/* Message */}
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label className="block text-sm font-medium mb-2">
                   Message
                 </label>
                 <textarea
-                  id="message"
                   name="message"
                   rows="4"
-                  placeholder="Tell us about your hair goals or any questions you have..."
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent resize-none"
+                  placeholder="Tell us about your hair goals..."
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white resize-none"
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
+              {/* Submit */}
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-11 rounded-md px-8 w-full bg-teal-600 hover:bg-teal-700 text-white transition-colors shadow-md"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-lg shadow-md"
               >
                 Send Message
               </button>
+
             </form>
           </div>
+
         </div>
       </div>
     </section>
