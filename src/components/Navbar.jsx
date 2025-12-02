@@ -9,15 +9,14 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/#" },
-    { name: "About", href: "#about" },
-    { name: "Our Work", href: "#our-work" },
-    { name: "Services", href: "#services" },
-    { name: "Products", href: "#products" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Our Work", href: "/#our-work" },
+    { name: "Services", href: "/#services" },
+    { name: "Products", href: "/#products" },
+    { name: "Contact", href: "/#contact" },
   ];
 
-  const address =
-    "6 The Square, Keyworth";
+  const address = "6 The Square, Keyworth";
 
   const mapsLink =
     "https://www.google.com/maps?sca_esv=940aa337a8577638&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifPdmE1kufqFORhnY_0rFG4NQrrnKA:1764699965931&kgmid=/g/1v27v0bd&shndl=30&shem=damc,lcuae,uaasie,shrtsdl&kgs=1cf3f3ec5b8a63c6&um=1&ie=UTF-8&fb=1&gl=lk&sa=X&geocode=KXmbl2SrxHlIMRXREbkM2F6b&daddr=6+The+Square,+Keyworth,+Nottingham+NG12+5JT,+United+Kingdom";
@@ -68,7 +67,7 @@ const Header = () => {
           </a>
         </div>
 
-        {/* HAMBURGER */}
+        {/* MOBILE HAMBURGER */}
         <button
           className="xl:hidden p-2 text-stone-700 dark:text-white"
           onClick={() => setOpen(!open)}
@@ -78,7 +77,7 @@ const Header = () => {
       </div>
 
       {/* MOBILE MENU */}
-      <AnimatePresence>
+      
         {open && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -117,7 +116,7 @@ const Header = () => {
               </a>
 
               <a
-                href="#contact"
+                href="/#contact"
                 className="mt-4 block w-full text-center bg-teal-600 text-white py-3 rounded-lg font-semibold shadow hover:bg-teal-700 transition"
                 onClick={() => setOpen(false)}
               >
@@ -126,7 +125,7 @@ const Header = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      
     </header>
   );
 };
