@@ -52,7 +52,7 @@ const ContactSection = () => {
 
               {/* Address - Click Maps */}
               <a
-                href="https://www.google.com/maps/search/?api=1&query=6+The+Square,+Keyworth,+Nottingham+NG12+5JT"
+                href="https://www.google.com/maps?sca_esv=940aa337a8577638&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifPdmE1kufqFORhnY_0rFG4NQrrnKA:1764699965931&kgmid=/g/1v27v0bd&shndl=30&shem=damc,lcuae,uaasie,shrtsdl&kgs=1cf3f3ec5b8a63c6&um=1&ie=UTF-8&fb=1&gl=lk&sa=X&geocode=KXmbl2SrxHlIMRXREbkM2F6b&daddr=6+The+Square,+Keyworth,+Nottingham+NG12+5JT,+United+Kingdom"
                 target="_blank"
                 className="flex items-start space-x-4 hover:text-teal-300"
               >
@@ -60,9 +60,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
                   <p className="text-stone-300 leading-relaxed">
-                    6 The Square<br />
-                    Keyworth, Nottingham<br />
-                    NG12 5JT
+                 6 The Square, Keyworth, Nottingham NG12 5JT, United Kingdom
                   </p>
                 </div>
               </a>

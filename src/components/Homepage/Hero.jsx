@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -5,9 +7,9 @@ import "aos/dist/aos.css";
 const HeroSection = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1200, // smooth animation duration
+      duration: 1200, 
       easing: "ease-in-out",
-      once: true, // run animation only once
+      once: true,
     });
   }, []);
 
@@ -22,21 +24,13 @@ const HeroSection = () => {
           allow="autoplay; encrypted-media"
           allowFullScreen
         ></iframe>
+
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto text-center relative z-10">
-        {/* Logo */}
-        <div className="mb-12" data-aos="fade-down">
-          <img
-            alt="Burns Hair Design Logo"
-            width="600"
-            height="300"
-            src="/burns-logo.jpeg"
-            className="mx-auto mb-8 drop-shadow-2xl"
-          />
-        </div>
 
         {/* Title */}
         <h1
@@ -56,11 +50,14 @@ const HeroSection = () => {
           classical music meets contemporary style.
         </p>
 
-        {/* Button */}
+        {/* Button → Scroll to Contact */}
         <div data-aos="zoom-in" data-aos-delay="400">
-          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg shadow-xl transition-colors duration-300">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg shadow-xl transition-colors duration-300"
+          >
             Book Your Consultation
-          </button>
+          </a>
         </div>
       </div>
     </section>
