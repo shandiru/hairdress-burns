@@ -50,7 +50,7 @@ export default function Footer() {
 
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-teal-400" />
-                <span>Keyworth, Nottingham, UK</span>
+                <span>   6 The Square, Keyworth, Nottingham NG12 5JT, United Kingdom</span>
               </div>
 
               <div className="flex items-center space-x-3">
