@@ -7,7 +7,7 @@ import HomePage from "./Page/Homepage"; // corrected path
 
 import TermsConditions from "./components/Term.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
-
+import GDPRConsent from "../src/components/GDPRBanner.jsx"
 function App() {
   return (
     <Router>
@@ -20,6 +20,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <GDPRConsent />
     </Router>
   );
 }
