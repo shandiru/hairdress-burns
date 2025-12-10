@@ -1,11 +1,8 @@
-
 "use client";
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Heart } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 
 const allProducts = [
   {
@@ -13,8 +10,7 @@ const allProducts = [
     name: "Milk shake make my day conditioner",
     category: "Milk Shake",
     description: "Hydrating conditioner for soft, radiant hair",
-    image:
-      "milk-shake-make-my-day-conditioner-300-ml-removebg-preview.png",
+    image: "milk-shake-make-my-day-conditioner-300-ml-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
@@ -22,8 +18,7 @@ const allProducts = [
     name: "milk shake silver shine conditioner",
     category: "Milk Shake",
     description: "Neutralises yellow tones for bright, shiny blondes.",
-    image:
-      "silver_shine_conditioner_100ml_2048x-removebg-preview.png",
+    image: "silver_shine_conditioner_100ml_2048x-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
@@ -40,20 +35,20 @@ const allProducts = [
     name: "Paul Mitchell Color Protect Shampoo",
     category: "Paul Mitchell",
     description: "Gentle cleanser that preserves color and boosts shine.",
-    image:
-      "Paul Mitchell Color Protect Shampoo.png",
+    image: "Paul Mitchell Color Protect Shampoo.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 5,
     name: "milk shake moisture plus shampoo",
     category: "Milk Shake",
-    description: "Moisture-boosting cleanse that leaves hair soft, manageable & vibrant..",
+    description:
+      "Moisture-boosting cleanse that leaves hair soft, manageable & vibrant..",
     image:
       "milk_shake-Moisture-Plus-Shampoo-300ml_1-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 6,
     name: "milk shake colour care  shampoo",
     category: "Milk Shake",
@@ -62,11 +57,12 @@ const allProducts = [
       "FLOWERPOWERSHAMPOO300ML-UPDATED2024_2048x-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 7,
     name: "milk shake integrity shampoo",
     category: "Milk Shake",
-    description: "Deep-nourish and restore damaged hair with muru muru butter.",
+    description:
+      "Deep-nourish and restore damaged hair with muru muru butter.",
     image:
       "INTEGRITY_SHAMPOO_300ML_-_UPDATED_2024_2048x-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
@@ -75,7 +71,8 @@ const allProducts = [
     id: 8,
     name: "Milk Shake Whipped Cream Leave-In Foam",
     category: "Milk Shake",
-    description: "Nourishing leave-in foam that softens, hydrates, and protects hair with milk proteins and Integrity.",
+    description:
+      "Nourishing leave-in foam that softens, hydrates, and protects hair with milk proteins and Integrity.",
     image:
       "Milk_Shake_Whipped_Cream_Leave-In_Foam-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
@@ -84,16 +81,17 @@ const allProducts = [
     id: 9,
     name: "Milk Shake Leave In Conditioner",
     category: "Milk Shake",
-    description: "Hydrating leave-in conditioner with milk proteins and fruit extracts for smooth, manageable hair.",
-    image:
-      "Milk Shake Leave In Conditioner.png",
+    description:
+      "Hydrating leave-in conditioner with milk proteins and fruit extracts for smooth, manageable hair.",
+    image: "Milk Shake Leave In Conditioner.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 10,
     name: "Paul Mitchell Color Protect Conditioner",
     category: "Paul Mitchell",
-    description: "Hydrates and shields color-treated hair from fading.",
+    description:
+      "Hydrates and shields color-treated hair from fading.",
     image:
       "Paul_Mitchell_Color_Protect_Conditioner-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
@@ -102,16 +100,18 @@ const allProducts = [
     id: 11,
     name: "Paul Mitchell Extra-Body Shampoo",
     category: "Paul Mitchell",
-    description: "Adds volume and body for fine or limp hair..",
+    description:
+      "Adds volume and body for fine or limp hair..",
     image:
       "Paul_Mitchell_Extra-Body_Shampoo-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 12,
     name: "Paul Mitchell Extra-Body Conditioner",
     category: "Paul Mitchell",
-    description: "Detangles while thickening strands for fuller results.",
+    description:
+      "Detangles while thickening strands for fuller results.",
     image:
       "paul-mitchell-extra-body-thicken-up-styling-liquid-200ml-p28680-72782_image-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
@@ -120,7 +120,8 @@ const allProducts = [
     id: 13,
     name: "Paul Mitchell Super Strong Shampoo",
     category: "Paul Mitchell",
-    description: "Strengthens weak hair, reducing breakage and split ends..",
+    description:
+      "Strengthens weak hair, reducing breakage and split ends..",
     image:
       "Paul_Mitchell_Super_Strong_Shampoo-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
@@ -129,52 +130,53 @@ const allProducts = [
     id: 14,
     name: "Paul Mitchell Super Strong Conditioner",
     category: "Paul Mitchell",
-    description: "Repairs and rebuilds damaged hair for resilience and shine..",
-    image:
-      "Paul_Mitchell_Super_Strong_Conditioner-removebg-preview.png",
+    description:
+      "Repairs and rebuilds damaged hair for resilience and shine..",
+    image: "Paul_Mitchell_Super_Strong_Conditioner-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 15,
     name: "Paul Mitchell Smooth Shampoo",
     category: "Paul Mitchell",
-    description: "Controls frizz and smooths coarse, unruly hair..",
-    image:
-      "Paul_Mitchell_Smooth_Shampoo-removebg-preview.png",
+    description:
+      "Controls frizz and smooths coarse, unruly hair..",
+    image: "Paul_Mitchell_Smooth_Shampoo-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 16,
     name: "Paul Mitchell The Detangler",
     category: "Paul Mitchell",
-    description: "Instantly detangles and softens medium to coarse hair..",
-    image:
-      "Paul_Mitchell_The_Detangler-removebg-preview.png",
+    description:
+      "Instantly detangles and softens medium to coarse hair..",
+    image: "Paul_Mitchell_The_Detangler-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 17,
     name: "Paul Mitchell Instant Moisture Shampoo",
     category: "Paul Mitchell",
-    description: "Restores hydration and elasticity to dry, thirsty hair.",
-    image:
-      "Paul_Mitchell_Instant_Moisture_Shampoo-removebg-preview.png",
+    description:
+      "Restores hydration and elasticity to dry, thirsty hair.",
+    image: "Paul_Mitchell_Instant_Moisture_Shampoo-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 18,
     name: "Paul Mitchell Soft Style Spray or Foam",
     category: "Paul Mitchell",
-    description: "Lightweight styling hold that adds softness and natural shine..",
-    image:
-      "Paul_Mitchell_Soft_Style_Spray_or_Foam-removebg-preview.png",
+    description:
+      "Lightweight styling hold that adds softness and natural shine..",
+    image: "Paul_Mitchell_Soft_Style_Spray_or_Foam-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 19,
     name: "Milk Shake Integrity Conditioner",
     category: "Milk Shake",
-    description: "Deep-conditioning formula that restores softness and hydration.",
+    description:
+      "Deep-conditioning formula that restores softness and hydration.",
     image: "INTEGRITY_CONDITIONER_300ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
@@ -182,7 +184,8 @@ const allProducts = [
     id: 20,
     name: "Milk Shake K-Respect Smoothing Shampoo",
     category: "Milk Shake",
-    description: "Anti-frizz smoothing shampoo for coarse or unruly hair.",
+    description:
+      "Anti-frizz smoothing shampoo for coarse or unruly hair.",
     image: "K_RESPECT_SMOOTHING_SHAMPOO_300ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
@@ -190,31 +193,38 @@ const allProducts = [
     id: 21,
     name: "Milk Shake Incredible Milk 12 Effects",
     category: "Milk Shake",
-    description: "Multi-benefit leave-in treatment offering hydration, repair & heat protection.",
-    image: "INCREDIBLE_MILK_12_EFFECTS_200ML-removebg-preview.png",
+    description:
+      "Multi-benefit leave-in treatment offering hydration, repair & heat protection.",
+    image:
+      "INCREDIBLE_MILK_12_EFFECTS_200ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 22,
     name: "Milk Shake Sensorial Mint Conditioner",
     category: "Milk Shake",
-    description: "Refreshing mint conditioner that cools the scalp and hydrates hair.",
-    image: "SENSORIAL_MINT_CONDITIONER_250ML-removebg-preview.png",
+    description:
+      "Refreshing mint conditioner that cools the scalp and hydrates hair.",
+    image:
+      "SENSORIAL_MINT_CONDITIONER_250ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
   {
     id: 23,
     name: "Milk Shake Vanilla Whipped Cream Leave-In Foam",
     category: "Milk Shake",
-    description: "Leave-in conditioning foam variant for softness and shine.",
-    image: "WHIPPED_CREAM_VANILLA_FOAM_200ML-removebg-preview.png",
+    description:
+      "Leave-in conditioning foam variant for softness and shine.",
+    image:
+      "WHIPPED_CREAM_VANILLA_FOAM_200ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
-   {
+  {
     id: 24,
     name: "Milk Shake Mini Miracle Gift Boxes",
     category: "Milk Shake",
-    description: "Travel-size combo kits including mini shampoo, conditioner & treatments.",
+    description:
+      "Travel-size combo kits including mini shampoo, conditioner & treatments.",
     image: "MINI_MIRACLE_GIFT_BOX-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
@@ -222,7 +232,8 @@ const allProducts = [
     id: 25,
     name: "Milk Shake Argan Repair Spray",
     category: "Milk Shake",
-    description: "Nourishing spray for protection, shine, and repair.",
+    description:
+      "Nourishing spray for protection, shine, and repair.",
     image: "ARGAN_REPAIR_SPRAY_150ML-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
   },
@@ -233,92 +244,93 @@ const allProducts = [
     description: "Hydrating conditioner in pink packaging for soft, radiant hair.",
     image: "MILK_SHAKE_PINK_CONDITIONER-removebg-preview.png",
     hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 27,
-  name: "Paul Mitchell Shampoo One",
-  category: "Paul Mitchell",
-  description: "Gentle daily cleanser that improves manageability and adds shine.",
-  image: "Paul_Mitchell_Shampoo_One.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-
-{
-  id: 28,
-  name: "Paul Mitchell The Conditioner",
-  category: "Paul Mitchell",
-  description: "Leave-in conditioner that smooths hair, reduces static and adds moisture.",
-  image: "Paul_Mitchell_The_Conditioner.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 29,
-  name: "Paul Mitchell Super Skinny Serum",
-  category: "Paul Mitchell",
-  description: "Smoothing serum that speeds up drying and adds shine.",
-  image: "Paul_Mitchell_Super_Skinny_Serum.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 30,
-  name: "Paul Mitchell Freeze and Shine Super Spray",
-  category: "Paul Mitchell",
-  description: "Firm-hold finishing spray that adds long-lasting shine.",
-  image: "Paul_Mitchell_Freeze_and_Shine_Super_Spray.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 31,
-  name: "Paul Mitchell Flexible Style Sculpting Foam",
-  category: "Paul Mitchell",
-  description: "Conditioning foam that controls frizz and adds volume.",
-  image: "Paul_Mitchell_Sculpting_Foam.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 32,
-  name: "Paul Mitchell Tea Tree Special Shampoo",
-  category: "Paul Mitchell",
-  description: "Invigorating shampoo that refreshes the scalp with tea tree oil.",
-  image: "Paul_Mitchell_Tea_Tree_Special_Shampoo.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 33,
-  name: "Paul Mitchell Tea Tree Special Conditioner",
-  category: "Paul Mitchell",
-  description: "Cooling conditioner that detangles and revitalises the scalp.",
-  image: "Paul_Mitchell_Tea_Tree_Special_Conditioner.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-{
-  id: 34,
-  name: "Paul Mitchell Super Clean Light Spray",
-  category: "Paul Mitchell",
-  description: "Light finishing spray for flexible hold and natural movement.",
-  image: "Paul_Mitchell_Super_Clean_Light.png",
-  hoverBg: "/burns-logo-removebg-preview.png",
-},
-
-
-
-
-
+  },
+  {
+    id: 27,
+    name: "Paul Mitchell Shampoo One",
+    category: "Paul Mitchell",
+    description:
+      "Gentle daily cleanser that improves manageability and adds shine.",
+    image: "Paul_Mitchell_Shampoo_One.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 28,
+    name: "Paul Mitchell The Conditioner",
+    category: "Paul Mitchell",
+    description:
+      "Leave-in conditioner that smooths hair, reduces static and adds moisture.",
+    image: "Paul_Mitchell_The_Conditioner.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 29,
+    name: "Paul Mitchell Super Skinny Serum",
+    category: "Paul Mitchell",
+    description:
+      "Smoothing serum that speeds up drying and adds shine.",
+    image: "Paul_Mitchell_Super_Skinny_Serum.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 30,
+    name: "Paul Mitchell Freeze and Shine Super Spray",
+    category: "Paul Mitchell",
+    description:
+      "Firm-hold finishing spray that adds long-lasting shine.",
+    image: "Paul_Mitchell_Freeze_and_Shine_Super_Spray.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 31,
+    name: "Paul Mitchell Flexible Style Sculpting Foam",
+    category: "Paul Mitchell",
+    description:
+      "Conditioning foam that controls frizz and adds volume.",
+    image: "Paul_Mitchell_Sculpting_Foam.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 32,
+    name: "Paul Mitchell Tea Tree Special Shampoo",
+    category: "Paul Mitchell",
+    description:
+      "Invigorating shampoo that refreshes the scalp with tea tree oil.",
+    image: "Paul_Mitchell_Tea_Tree_Special_Shampoo.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 33,
+    name: "Paul Mitchell Tea Tree Special Conditioner",
+    category: "Paul Mitchell",
+    description:
+      "Cooling conditioner that detangles and revitalises the scalp.",
+    image: "Paul_Mitchell_Tea_Tree_Special_Conditioner.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
+  {
+    id: 34,
+    name: "Paul Mitchell Super Clean Light Spray",
+    category: "Paul Mitchell",
+    description:
+      "Light finishing spray for flexible hold and natural movement.",
+    image: "Paul_Mitchell_Super_Clean_Light.png",
+    hoverBg: "/burns-logo-removebg-preview.png",
+  },
 ];
-
 
 export default function Essentials() {
   const [hovered, setHovered] = React.useState(null);
-  const [selectedCategory, setSelectedCategory] =
-    React.useState("Milk Shake");
+  const [selectedCategory, setSelectedCategory] = React.useState("Milk Shake");
 
   const categories = ["Milk Shake", "Paul Mitchell"];
-  const products = allProducts.filter(
-    (p) => p.category === selectedCategory
-  );
+  const products = allProducts.filter((p) => p.category === selectedCategory);
 
   return (
-    <section className="py-16 md:py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative overflow-hidden" id="products">
+    <section
+      className="py-16 md:py-24 bg-white text-[#0A0A0A] font-[Instrument Sans] relative overflow-hidden"
+      id="products"
+    >
       <div className="container mx-auto px-4 md:px-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5 mb-8 md:mb-14">
@@ -344,11 +356,11 @@ export default function Essentials() {
           </div>
         </div>
 
-        {/* Swiper (no arrows) */}
+        {/* Swiper */}
         <Swiper
           slidesPerView={1}
           spaceBetween={16}
-          speed={600}
+          speed={0}
           loop={false}
           grabCursor={true}
           breakpoints={{
@@ -359,61 +371,38 @@ export default function Essentials() {
           }}
           className="!overflow-visible"
         >
-          {products.map((p, i) => (
+          {products.map((p) => (
             <SwiperSlide key={p.id}>
-              <motion.div
-                className="group relative flex flex-col items-center justify-between rounded-[20px] bg-[#F9F9F8] overflow-hidden shadow-[0_6px_30px_rgba(0,0,0,0.05)] transition-all duration-300 w-full h-[460px] sm:h-[480px] md:h-[500px]"
+              <div
+                className="group relative flex flex-col items-center justify-between rounded-[20px] bg-[#F9F9F8] overflow-hidden shadow-[0_6px_30px_rgba(0,0,0,0.05)] w-full h-[460px] sm:h-[480px] md:h-[500px]"
                 onMouseEnter={() => setHovered(p.id)}
                 onMouseLeave={() => setHovered(null)}
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
               >
-                {/* ❤️ Wishlist Button */}
+                {/* Wishlist Button */}
                 <button className="absolute top-4 right-4 z-30 p-2 bg-white/70 rounded-full hover:bg-white transition">
                   <Heart className="w-5 h-5 text-gray-400 group-hover:text-black" />
                 </button>
 
-                {/* Hover Background */}
-                <AnimatePresence>
-                  {hovered === p.id && (
-                    <motion.img
-                      key="hover-bg"
-                      src={p.hoverBg}
-                      alt="Background"
-                      className="absolute inset-0 w-full h-full object-contain z-0 opacity-[0.15]"
-                      initial={{ opacity: 0, scale: 1.05 }}
-                      animate={{ opacity: 1, scale: 0.95 }}
-                      exit={{ opacity: 0, scale: 1 }}
-                      transition={{ duration: 0.6 }}
-                    />
-                  )}
-                </AnimatePresence>
+                {/* Hover Background (static) */}
+                {hovered === p.id && (
+                  <img
+                    src={p.hoverBg}
+                    alt="hover background"
+                    className="absolute inset-0 w-full h-full object-contain z-0 opacity-[1]"
+                  />
+                )}
 
                 {/* Product Image */}
                 <div className="relative flex justify-center items-center h-[300px] sm:h-[340px] md:h-[380px] w-full py-6 sm:py-8 z-10">
-                  <motion.img
+                  <img
                     src={p.image}
                     alt={p.name}
-                    className="w-[160px] sm:w-[200px] md:w-[240px] h-auto object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
-                    animate={{
-                      scale: hovered === p.id ? 1.05 : 1,
-                      y: hovered === p.id ? -8 : 0,
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 160,
-                      damping: 12,
-                    }}
+                    className="w-[160px] sm:w-[200px] md:w-[240px] h-auto object-contain"
                   />
                 </div>
 
                 {/* Product Info */}
-                <motion.div
-                  className="flex flex-col w-full px-5 sm:px-6 py-5 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10 text-center sm:text-left"
-                  animate={{ opacity: hovered === p.id ? 0.95 : 1 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <div className="flex flex-col w-full px-5 sm:px-6 py-5 border-t border-[#EAEAEA] bg-[#F9F9F8] z-10 text-center sm:text-left">
                   <h3 className="text-[15px] sm:text-[17px] font-semibold leading-tight tracking-tight mb-1">
                     {p.name}
                   </h3>
@@ -423,8 +412,8 @@ export default function Essentials() {
                   <p className="text-[13px] sm:text-[15px] text-gray-700 leading-snug">
                     {p.description}
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
