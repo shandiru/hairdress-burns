@@ -9,6 +9,7 @@ import TestimonialsSection from "../components/Homepage/TestimonialsSection"
 import ServicesPricingSection from "../components/Homepage/ServicesPricingSection"
 import ContactSection from "../components/Homepage/ContactSection"
 import Products from "../components/Homepage/products";
+import Gallery from "../components/Homepage/Gallery";
 function Home() {
   return (
     <>
@@ -18,6 +19,7 @@ function Home() {
       <OurWorkSection />
       <TestimonialsSection />
       <ServicesPricingSection />
+      <Gallery />
       <Products />
       <ContactSection />
     
