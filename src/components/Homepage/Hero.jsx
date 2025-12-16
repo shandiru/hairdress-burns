@@ -7,35 +7,37 @@ import "aos/dist/aos.css";
 const HeroSection = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1200, 
+      duration: 1200,
       easing: "ease-in-out",
       once: true,
     });
   }, []);
 
   return (
-    <section className="relative py-32 px-4 overflow-hidden min-h-screen flex items-center">
-      
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
+
       {/* Background Video */}
-      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+      <div className="absolute inset-0 z-0">
         <video
-          src="/Hair Salon BROLL video shot on SONY A7siii.mp4"
+          src="/hero.mp4"
           autoPlay
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        ></video>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+          className="w-full h-full object-cover"
+        />
+
+        {/* BLACK OPACITY OVERLAY */}
+        <div className="absolute inset-0 bg-black/70"></div>
+        {/* ↑ change 70 to 60 or 80 if you want */}
       </div>
 
       {/* Content */}
-      <div className="container mx-auto text-center relative z-10">
+      <div className="relative z-10 container mx-auto text-center text-white">
 
         {/* Title */}
         <h1
-          className="text-4xl md:text-6xl font-light text-white mb-6 tracking-wide drop-shadow-lg"
+          className="text-4xl md:text-6xl font-light mb-6 tracking-wide drop-shadow-lg"
           data-aos="fade-up"
         >
           Timeless Elegance
@@ -51,15 +53,16 @@ const HeroSection = () => {
           classical music meets contemporary style.
         </p>
 
-        {/* Button → Scroll to Contact */}
+        {/* CTA Button */}
         <div data-aos="zoom-in" data-aos-delay="400">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg shadow-xl transition-colors duration-300"
+            className="inline-flex items-center justify-center gap-2 h-11 px-8 text-lg font-medium rounded-md bg-teal-600 hover:bg-teal-700 transition-colors shadow-xl"
           >
             Book Your Consultation
           </a>
         </div>
+
       </div>
     </section>
   );
