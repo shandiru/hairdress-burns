@@ -1,17 +1,10 @@
-"use client";
+
 
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const HeroSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
+ 
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
@@ -19,17 +12,27 @@ const HeroSection = () => {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="/hero.mp4"
+          poster="/hero-poster.jpg" // show placeholder before video loads
+          preload="metadata" // load metadata only, not full video
           autoPlay
           muted
           loop
           playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          {/* Mobile-optimized video */}
+          <source
+            src="/hero-mobile.mp4"
+            type="video/mp4"
+            media="(max-width: 768px)"
+          />
+          {/* Desktop video */}
+          <source src="/hero.mp4" type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
 
         {/* BLACK OPACITY OVERLAY */}
         <div className="absolute inset-0 bg-black/70"></div>
-        {/* ↑ change 70 to 60 or 80 if you want */}
       </div>
 
       {/* Content */}

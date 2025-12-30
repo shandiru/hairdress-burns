@@ -1,8 +1,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import emailjs from "@emailjs/browser";
 import { MapPin, Phone, Sparkles, Mail } from "lucide-react";
 
@@ -10,14 +9,7 @@ const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-      mirror: true,
-    });
-  }, []);
+  
 
   // EMAILJS SUBMIT FUNCTION
   const sendEmail = async (e) => {

@@ -1,31 +1,11 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// src/components/ServicesPricingSection.jsx
+import React from "react";
 import { Scissors, Palette } from "lucide-react";
 
+// Import data
+import { hairServices, colorServices } from "../../data/services";
+
 const ServicesPricingSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-      mirror: true,
-    });
-  }, []);
-
-  const hairServices = [
-    { name: "Cut & Finish", price: "£54+" },
-    { name: "Wash & Cut", price: "£44+" },
-    { name: "Blowdry & Finish", price: "£35+" },
-  ];
-
-  const colorServices = [
-    { name: "Root Tint", price: "£87+" },
-    { name: "Half Mech", price: "£85+" },
-    { name: "Full Mech", price: "£100+" },
-    { name: "Demi/Semi", price: "£79+" },
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-stone-50 to-slate-100" id="services">
       <div className="container mx-auto px-4">
