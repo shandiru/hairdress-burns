@@ -1,4 +1,4 @@
-"use client";
+
 
 import React, { useState } from "react";
 import { Phone, MapPin, Menu, X } from "lucide-react";
