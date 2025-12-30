@@ -8,12 +8,7 @@ const ContactSection = () => {
   const [statusMessage, setStatusMessage] = useState("");
 
   // Debug environment variables
-  useEffect(() => {
-    console.log("ContactSection mounted");
-    console.log("SERVICE ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("TEMPLATE ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log("PUBLIC KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
+
 
   // EMAILJS FORM SUBMISSION
   const sendEmail = async (e) => {
