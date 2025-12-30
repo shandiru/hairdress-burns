@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const MeetHarrietSection = () => {
   const [activeInfo, setActiveInfo] = useState(null);
   const [activeJourney, setActiveJourney] = useState(null);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-      mirror: true,
-    });
-  }, []);
+
 
   const handleInfoClick = (index) => {
     if (window.innerWidth < 768)

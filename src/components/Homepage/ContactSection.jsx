@@ -1,7 +1,5 @@
-
-
-import React, { useEffect, useState } from "react";
-
+// src/components/ContactSection.jsx
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { MapPin, Phone, Sparkles, Mail } from "lucide-react";
 
@@ -9,20 +7,26 @@ const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
 
-  
+  // Debug environment variables
+  useEffect(() => {
+    console.log("ContactSection mounted");
+    console.log("SERVICE ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log("TEMPLATE ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log("PUBLIC KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
-  // EMAILJS SUBMIT FUNCTION
+  // EMAILJS FORM SUBMISSION
   const sendEmail = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setStatusMessage(""); // reset message
+    setStatusMessage("");
 
     try {
       await emailjs.sendForm(
-        "service_404lxe7", // <-- replace
-        "template_rdxipwq", // <-- replace
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
-        "tmUgtXKf_TwGrV1iE" // <-- replace
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       setStatusMessage("Message sent successfully!");
       e.target.reset();
@@ -47,6 +51,7 @@ const ContactSection = () => {
               <a
                 href="https://www.google.com/maps"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-start space-x-4 hover:text-teal-300"
               >
                 <MapPin className="h-6 w-6 text-teal-400 mt-1 flex-shrink-0" />
@@ -108,30 +113,56 @@ const ContactSection = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">First Name</label>
-                  <input type="text" name="firstName" required placeholder="Your first name" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    required
+                    placeholder="Your first name"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Last Name</label>
-                  <input type="text" name="lastName" required placeholder="Your last name" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    required
+                    placeholder="Your last name"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
+                  />
                 </div>
               </div>
 
               {/* Email */}
               <div>
                 <label className="block text-sm font-medium mb-2">Email</label>
-                <input type="email" name="email" required placeholder="your.email@example.com" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white" />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
+                />
               </div>
 
               {/* Phone */}
               <div>
                 <label className="block text-sm font-medium mb-2">Phone Number</label>
-                <input type="tel" name="phone" placeholder="Your phone number" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white" />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your phone number"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
+                />
               </div>
 
               {/* Service Interest */}
               <div>
                 <label className="block text-sm font-medium mb-2">Service Interest</label>
-                <select name="service" className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white">
+                <select
+                  name="service"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white"
+                >
                   <option value="" className="text-stone-800">Select a service</option>
                   <option value="cut-finish" className="text-stone-800">Cut & Finish</option>
                   <option value="wash-cut" className="text-stone-800">Wash & Cut</option>
@@ -147,14 +178,21 @@ const ContactSection = () => {
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
-                <textarea name="message" rows="4" placeholder="Tell us about your hair goals..." className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white resize-none"></textarea>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us about your hair goals..."
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white resize-none"
+                ></textarea>
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`w-full text-white font-semibold py-3 rounded-lg shadow-md ${isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"}`}
+                className={`w-full text-white font-semibold py-3 rounded-lg shadow-md ${
+                  isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"
+                }`}
               >
                 {isLoading ? "Sending..." : "Send Message"}
               </button>
