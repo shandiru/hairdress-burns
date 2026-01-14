@@ -66,11 +66,11 @@ const ContactSection = () => {
                 </div>
               </a>
 
-              <a href="mailto:info@burnshairdesign.com" className="flex items-start space-x-4 hover:text-teal-300">
+              <a href="mailto:harrietburns1989@gmail.com" className="flex items-start space-x-4 hover:text-teal-300">
                 <Mail className="h-6 w-6 text-teal-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-stone-300">info@burnshairdesign.com</p>
+                  <p className="text-stone-300">harrietburns1989@gmail.com</p>
                 </div>
               </a>
 

@@ -54,9 +54,9 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 text-teal-400" />
                 <span>6 The Square, Keyworth, Nottingham NG12 5JT, UK</span>
               </a>
-              <a href="mailto:info@burnshairdesign.com" className="flex items-center justify-center sm:justify-start space-x-3 hover:text-white transition">
+              <a href="mailto:harrietburns1989@gmail.com" className="flex items-center justify-center sm:justify-start space-x-3 hover:text-white transition">
                 <Mail className="h-5 w-5 text-teal-400" />
-                <span>info@burnshairdesign.com</span>
+                <span>harrietburns1989@gmail.com</span>
               </a>
             </div>
           </div>
