@@ -1,7 +1,7 @@
 // src/data/services.js
 
 export const hairServices = [
-  { name: "Cut & Finish", price: "£54+" },
+  { name: "Cut & Finish", price: "£57+" },
   { name: "Wash & Cut", price: "£44+" },
   { name: "Blowdry & Finish", price: "£35+" },
 ];
