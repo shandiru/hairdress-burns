@@ -10,6 +10,7 @@ import ServicesPricingSection from "../components/Homepage/ServicesPricingSectio
 import ContactSection from "../components/Homepage/ContactSection"
 import Products from "../components/Homepage/products";
 import Gallery from "../components/Homepage/Gallery";
+import BeforeAfterSection from "../components/Homepage/BeforeAfterSection";
 function Home() {
   return (
     <>
@@ -21,6 +22,7 @@ function Home() {
       <ServicesPricingSection />
       <Gallery />
       <Products />
+      <BeforeAfterSection />
       <ContactSection />
     
     </>
