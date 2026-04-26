@@ -56,7 +56,7 @@ export default function BeforeAfterSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 grid grid-cols-1 gap-10 md:grid-cols-2">
           <div>
-            <p className="mb-2 text-sm text-stone-500">Home / Before & After</p>
+           
             <h2 className="text-4xl font-light text-stone-800">
               Beautiful Hair Transformations
             </h2>
