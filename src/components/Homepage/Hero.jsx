@@ -22,12 +22,12 @@ const HeroSection = () => {
         >
           {/* Mobile-optimized video */}
           <source
-            src="/hero-mobile.mp4"
+            src="/newhero.mp4"
             type="video/mp4"
             media="(max-width: 768px)"
           />
           {/* Desktop video */}
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/newhero.mp4" type="video/mp4" />
           Your browser does not support video playback.
         </video>
 
